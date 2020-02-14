@@ -1,0 +1,29 @@
+@font-face {font-family: "iconfont";
+  src: url('./iconfont/iconfont.eot?t=1581659861140'); /* IE9 */
+  src: url('./iconfont/iconfont.eot?t=1581659861140#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAANQAAsAAAAABzQAAAMEAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDHAqBbIFmATYCJAMQCwoABCAFhG0HSxtbBsguIScbXqQ7zsvrTJexx4ATem3AgQ+Ih68x1vu7i2qSJBpVp5NEpBEiSSw2Smc6Z/kyA+dcAAdwpA1oE4+yKG1qjGuVHkt/wF9Phd//NS2CsGk3CaiqxmwPc0C5l8svGt1N2L0Jy0ZQFnABQjPuPbNcOh/LRAfSfPpT/+VlAUVgLkrAxuTRbvACTZqAGWYdYBVNAv7+/88x45VNIL9t7RKVFBU02hvgKFoH1n1VZHcgeArDa13qsK4TqNWDAq4dnt/nago2LxB3vmvkajmnooiRaqGyZmsRH4Tq9EjdwHv49/EPB09SkbGb1i8O7Nz292J7xDNSfiDPZ4G4i4xRgEJc1dpOFOPgKFitPrpkAqBatcRcA2b7eWpgx1zbThr9z4tKLL0ejCGU+V50ySS+N6Tq5K8QvEBJAdXeKGUG4BDDdqELIee2+m847J7N7JcYX87LSYKunhJs/TzOle9f9fuvP7/l+yfiZNkQF3h+c5ssZkg576dztBfHsswtnY7erpto/HGMhF9HguXm+6U//HPXHPF6TNjykhGclAM2YqfwitPCE7cCB1yODXGH4mPwkuLvSXQZ2EmKjcxbhRHAD+qPCcMhKC799mn2X9W91p37X63j1n1F9S91/KCB/vx/x9f5P5nfs6IYQqYvRRO5PHNV0QsGCbW2kV8bpdVzDlXH/YdDtY4UkirdkFXrRRTMKFSoMwaVqi1CrRHS7jptXEVRajCsIBCaHSBp9AlZszuiYB5QodMbKjUHoNZGtB1Zpz+2jVVGQ9AGeQKWRYnjGKURZd6iqyKDs8IQ94ic+R7gVb0YOcIEeY4V3tDd8MUBnSkGkdyGUURgMwVoyYopkg5YbVX3QysKxbmGVQwZBLIB2QSwWEjC8WuLRun3byGXEjFwS1md9RFiGX94wGNwPRBHsqRX2b28xTPk2uATDqBjJAZEMglFIgTY9ZMCyCJWmCP8qQHWrqb3la2sr4i/cBvUYt9YIkWOEhWabnwjEVIGM422BJddGYmn/Mo9qUxRLgc=') format('woff2'),
+  url('./iconfont/iconfont.woff?t=1581659861140') format('woff'),
+  url('./iconfont/iconfont.ttf?t=1581659861140') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('./iconfont/iconfont.svg?t=1581659861140#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* .iconjiantouarrow486:before {
+  content: "\e6aa";
+}
+
+.iconfanhui:before {
+  content: "\e624";
+}
+
+.iconsousuo:before {
+  content: "\e632";
+} */
+
