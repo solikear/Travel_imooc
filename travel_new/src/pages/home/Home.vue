@@ -45,7 +45,6 @@ export default {
 			res = res.data
 			if(res.ret && res.data){
 				const data = res.data
-				console.log(data.city);
 				this.city = data.city
 				this.swiperList = data.swiperList
 				this.iconList = data.iconList
