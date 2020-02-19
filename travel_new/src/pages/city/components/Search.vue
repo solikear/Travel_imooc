@@ -10,7 +10,7 @@
 		</div>
 		<div class="search-content" ref="search" v-show="keyword">
 			<ul>
-				<li v-for="item of list" :key="item.id" class="search-item border-bottom">
+				<li v-for="item of list" :key="item.id" class="search-item border-bottom" @click="handleCityClick(item.name)">
 					{{ item.name }}
 				</li>
 				<li class="search-item border-bottom" v-show="hasNoData">没有找到匹配数据</li>
@@ -31,6 +31,12 @@ export default {
 			keyword: '',
 			list: [],
 			timer: null
+		}
+	},
+	methods:{
+		handleCityClick(cityName){
+			this.$store.commit('changeCity',cityName)
+			this.$router.push('/')
 		}
 	},
 	watch: {
