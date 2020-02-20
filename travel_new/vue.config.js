@@ -9,6 +9,7 @@ module.exports = {
 		config.resolve.alias
 			.set('@$', resolve('src'))
 			.set('styles', resolve('src/assets/styles'))
+			.set('common',resolve('src/common'))
 	},
 	devServer: {
 		proxy: {
