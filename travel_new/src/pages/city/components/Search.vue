@@ -65,7 +65,9 @@ export default {
 		}
 	},
 	mounted() {
-		this.scroll = new BScroll(this.$refs.search)
+		this.scroll = new BScroll(this.$refs.search,{
+			click:true
+		})
 	},
 	computed: {
 		hasNoData() {
@@ -101,7 +103,7 @@ export default {
 	bottom 0
 	background #eee
 	.search-item
-		line-height 0.62rem
+		line-height 0.7rem
 		padding-left 0.2rem
 		background #fff
 		color #666
