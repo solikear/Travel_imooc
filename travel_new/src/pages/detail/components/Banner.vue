@@ -1,19 +1,20 @@
 <template>
 	<div>
 		<div class="banner" @click="handleBannerClick">
-			<img
-				class="banner-img"
-				src="http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_600x330_bf9c4904.jpg"
-			/>
+			<img class="banner-img" :src="bannerImg" />
 			<div class="banner-info">
-				<div class="banner-title">二次元海洋世界</div>
+				<div class="banner-title">{{ sightName }}</div>
 				<div class="banner-number">
 					<span class="iconfont banner-icon">&#xe692;</span>
-					39
+					{{ galleryImgs.length }}
 				</div>
 			</div>
 		</div>
-		<common-gallery :imgs="imgs" v-show="showGallery" @close="handleGalleryClose"></common-gallery>
+		<common-gallery
+			:imgs="galleryImgs"
+			v-show="showGallery"
+			@close="handleGalleryClose"
+		></common-gallery>
 	</div>
 </template>
 
@@ -22,22 +23,23 @@ import CommonGallery from 'common/gallery/Gallery.vue'
 export default {
 	name: 'DetailBanner',
 	components: {
-		CommonGallery,
+		CommonGallery
 	},
 	data: function() {
 		return {
-			showGallery:false,
-			imgs: [
-				'http://img1.qunarzz.com/sight/p0/201404/23/04b92c99462687fa1ba45c1b5ba4ad77.jpg_800x800_70debc93.jpg',
-				'http://img1.qunarzz.com/sight/p0/1709/76/7691528bc7d7ad3ca3.img.png_800x800_9ef05ee7.png'
-			]
+			showGallery: false
 		}
 	},
-	methods:{
-		handleBannerClick(){
+	props: {
+		sightName: String,
+		bannerImg: String,
+		galleryImgs: Array
+	},
+	methods: {
+		handleBannerClick() {
 			this.showGallery = true
 		},
-		handleGalleryClose(){
+		handleGalleryClose() {
 			this.showGallery = false
 		}
 	}
@@ -60,7 +62,7 @@ export default {
 		bottom 0
 		height 0.6rem
 		color #fff
-		background linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))
+		background linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8))
 		.banner-title
 			flex 1
 			font-size 0.32rem

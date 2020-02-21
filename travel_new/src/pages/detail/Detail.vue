@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<detail-banner></detail-banner>
+		<detail-banner :sightName="sightName" :bannerImg='bannerImg' :galleryImgs='galleryImgs'></detail-banner>
 		<detail-header></detail-header>
-		<div class="content"><detail-list :list="list"></detail-list></div>
+		<div class="content"><detail-list :list="categoryList"></detail-list></div>
 	</div>
 </template>
 
@@ -10,6 +10,7 @@
 import DetailBanner from './components/Banner.vue'
 import DetailHeader from './components/Header.vue'
 import DetailList from './components/List.vue'
+import axios from 'axios'
 export default {
 	name: 'Detail',
 	components: {
@@ -19,35 +20,45 @@ export default {
 	},
 	data() {
 		return {
-			list: [
-				{
-					title: '成人票',
-					children: [
-						{
-							title: '成人三馆联票',
-							children: [
-								{
-									title: '成人三馆联票 - 某一连锁店销售'
-								}
-							]
-						},
-						{
-							title: '成人五馆联票'
-						}
-					]
-				},
-				{
-					title: '学生票'
-				},
-				{
-					title: '儿童票'
-				},
-				{
-					title: '特惠票'
-				}
-			]
+			sightName: '',
+			bannerImg: '',
+			galleryImgs: [],
+			categoryList: [],
+			// lastId:''
 		}
-	}
+	},
+	methods: {
+		getDetailInfoSucc(res) {
+			res = res.data
+			if (res.ret && res.data) {
+				const data = res.data
+				this.sightName = data.sightName
+				this.bannerImg = data.bannerImg
+				this.galleryImgs = data.galleryImgs
+				this.categoryList = data.categoryList
+			}
+		},
+		getDetailInfo() {
+			axios
+				.get('/api/detail.json', {
+					params: {
+						id: this.$route.params.id
+					}
+				})
+				.then(this.getDetailInfoSucc)
+		}
+	},
+	mounted() {
+		// this.lastId = this.$route.params.id
+		this.getDetailInfo()
+	},
+	// activated() {
+	// 	console.log(this.$route.params.id);
+	// 	if(this.lastId !== this.$route.params.id){
+	// 		this.lastId = this.$route.params.id
+	// 		this.getDetailInfo()
+	// 	}
+	// }
 }
 </script>
 
